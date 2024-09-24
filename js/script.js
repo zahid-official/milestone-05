@@ -1,8 +1,10 @@
+// navbar
 const blogButton = document.getElementById('blog-button');
 const mainBalance = document.getElementById('main-balance');
 const donationButton = document.getElementById('donation-button');
 const historyButton = document.getElementById('history-button');
 
+// donation & history
 const donationArea = document.getElementById('donation-area');
 const historyArea = document.getElementById('history-area');
 const donationHistory = document.getElementById('donation-history');
@@ -21,14 +23,6 @@ const feniButton = document.getElementById('feni-button');
 const quotaDonation = document.getElementById('quota-donation');
 const quotaInput = document.getElementById('quota-input');
 const quotaButton = document.getElementById('quota-button');
-
-
-
-
-
-
-
-
 
 
 
@@ -55,7 +49,6 @@ historyButton.addEventListener('click', function(){
     donationArea.classList.add('hidden');
     historyArea.classList.remove('hidden');
 })
-
 
 
 
@@ -87,21 +80,6 @@ noakhaliButton.addEventListener('click', function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // feni donation
 feniButton.addEventListener('click', function(){
     const feniValue = parseFloat(feniInput.value);
@@ -130,26 +108,6 @@ feniButton.addEventListener('click', function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // quota donation
 quotaButton.addEventListener('click', function(){
     const quotaValue = parseFloat(quotaInput.value);
@@ -175,5 +133,3 @@ quotaButton.addEventListener('click', function(){
     // modal
     my_modal_5.showModal();
 })
-
-
