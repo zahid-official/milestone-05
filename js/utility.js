@@ -16,4 +16,3 @@ function getNumber(id){
     const tagText = document.getElementById(id);
     return parseFloat(tagText.innerText);
 }
-

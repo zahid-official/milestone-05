@@ -9,7 +9,6 @@ const historyArea = getId('history-area');
 const donationHistory = getId('donation-history');
 
 
-
 // button: blog
 getId('blog-button').addEventListener('click', function(){
     window.location.href = './pages/blog.html';
@@ -59,7 +58,7 @@ getId('noakhali-button').addEventListener('click', function(){
     getId('noakhali-input').value = '';
 
     // modal
-    my_modal_5.showModal();
+    my_modal_1.showModal();
 })
 
 
@@ -88,7 +87,7 @@ getId('feni-button').addEventListener('click', function(){
     getId('feni-input').value = '';
 
     // modal
-    my_modal_5.showModal();
+    my_modal_1.showModal();
 })
 
 
@@ -117,5 +116,5 @@ getId('quota-button').addEventListener('click', function(){
     getId('quota-input').value = '';
 
     // modal
-    my_modal_5.showModal();
+    my_modal_1.showModal();
 })
