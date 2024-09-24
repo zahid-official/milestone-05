@@ -19,7 +19,6 @@
                 clifford: '#da373d',
                 primary: '#b4f461',
                 secondary: '#111111B3',
-                third: '#1111110D',
                 'primary-hover': '#a6e751',
               }
             }
@@ -31,9 +30,9 @@
 </head>
 
 <body>
-    <header class="header-area">
+    <header class="header-area sticky top-0 backdrop-blur-sm">
         <!-- navbar -->
-        <div class="navbar md:flex-row flex-col justify-between items-center gap-5 py-8 sm:px-16 bg-[#f9f7f3]">
+        <div class="navbar md:flex-row flex-col justify-between items-center gap-5 py-8 sm:px-16 bg-[#f9f7f3] bg-opacity-80">
             <!-- blog-button -->
             <div>
                 <button id="blog-button" class="btn bg-primary hover:bg-primary-hover text-xl font-bold">Blog</button>
@@ -51,9 +50,9 @@
         </div>
 
         <!-- button-area -->
-         <div class="button-area text-center space-x-3 pt-24">
-            <button id="donation-button" class="btn btn-lg bg-primary text-secondary text-xl font-bold">Donation</button>
-            <button id="history-button" class="btn btn-lg text-secondary text-xl font-bold">History</button>
+         <div class="button-area text-center space-x-3 pb-8 pt-20">
+            <button id="donation-button" class="btn btn-lg text-secondary text-xl font-bold bg-primary border-none">Donation</button>
+            <button id="history-button" class="btn btn-lg text-secondary text-xl font-bold bg-base-300 border-none">History</button>
          </div>
     </header>
     <!-- header-area-ends -->
@@ -62,7 +61,7 @@
         <!-- donation-area-->
         <div id="donation-area">
             <!-- noakhali-donation -->
-            <section class="noakhali-donate border-2 p-7 rounded-3xl mx-4 my-12">
+            <section class="noakhali-donate border-2 p-7 rounded-3xl mx-4 my-10">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
 
                     <!-- noakhali cover-photo -->
@@ -78,7 +77,7 @@
                         <p>The devastating floods that have recently struck Noakhali, Bangladesh, have incurred considerable damage, with thousands of families rendered homeless, and many without shelter, food, and clean drinking water. As communities struggle to respond to this disaster, there is an urgent need for support and relief. Your donations can make a meaningful impact when working with reputable organizations who would provide food, clean drinking water, and medical care directly to those affected. Additionally, your donations do not only provide immediate relief but aid in long-term recovery and rebuilding, giving families the time and resources they need to get back on their feet and restore their livelihoods. Every donation, regardless of its size, is meaningful and impacts the lives of those in need after natural disasters. </p>
 
                         <input id="noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button id="noakhali-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Button</button>
+                        <button id="noakhali-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Donate Now</button>
                     </div>
                 </div>
             </section>
@@ -100,7 +99,7 @@
                         <p>The recent floods in the Feni district of Bangladesh have caused widespread destruction leaving hundreds of families in desperate need of help. Houses are underwater, crops destroyed and infrastructure has been severely damaged, creating an urgent humanitarian crisis. Many families are without safe drinking water, food, and medical assistance and immediate help is essential. Your donations can help make a difference and offer support to those affected by this calamity. Donations will enable reputable organizations to provide, food packages, clean drinking water and medical assistance to those affected by this disaster. In addition, your support will also contribute to long-term recovery efforts, so households are able to rebuild their lives and livelihoods in the wake of the floods. Even the smallest donation will support our mission of ensuring that aid reaches those impacted the most. As people of compassion and solidarity, it is important that we unite with the people of Feni. Please consider to giving today to restore hope.</p>
 
                         <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button id="feni-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Button</button>
+                        <button id="feni-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Donate Now</button>
                     </div>
                 </div>
             </section>
@@ -122,7 +121,7 @@
                         <p>The protests are led by the student wing of protesters, demanding reform of the system for government jobs allocations; clashes broke out in which some demonstrators were injured. A lot of body and face damage were sustained my rights activists along the students calling for an improved system. In the meantime, we also play a hand with quick help for those people affected by these events. Funding from donations can also pay for vital medical treatment, providing assistance for the injured and mental health support to victims traumatized by the violence. Moreover your contribution to the injured protesters will be recovered and there are many reputed organizations and initiatives which is helping them in their recovery. All help, be it money or alerting to the situation, is important. For they who have been wronged, let us stand in solidarity with them and support the battle to obtain justice for equality in the recruitment process. We can support them as they heal and go on to be other young people for whom the tragedy of gun violence will inform their activism.</p>
                         
                         <input id="quota-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                        <button id="quota-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Button</button>
+                        <button id="quota-button" class="btn text-lg bg-primary hover:bg-primary-hover w-full">Donate Now</button>
                     </div>
                 </div>
             </section>

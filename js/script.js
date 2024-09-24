@@ -35,7 +35,7 @@ blogButton.addEventListener('click', function(){
 // button: donation
 donationButton.addEventListener('click', function(){
     donationButton.style.backgroundColor = '#b4f461';
-    historyButton.style.backgroundColor = '#1111110D';
+    historyButton.style.backgroundColor = '#e5e6e6';
 
     donationArea.classList.remove('hidden');
     historyArea.classList.add('hidden');
@@ -44,7 +44,7 @@ donationButton.addEventListener('click', function(){
 // button: history
 historyButton.addEventListener('click', function(){
     historyButton.style.backgroundColor = '#b4f461';
-    donationButton.style.backgroundColor = '#1111110D';
+    donationButton.style.backgroundColor = '#e5e6e6';
 
     donationArea.classList.add('hidden');
     historyArea.classList.remove('hidden');
