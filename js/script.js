@@ -1,34 +1,17 @@
 // navbar
-const blogButton = document.getElementById('blog-button');
-const mainBalance = document.getElementById('main-balance');
-const donationButton = document.getElementById('donation-button');
-const historyButton = document.getElementById('history-button');
+const mainBalance = getId('main-balance');
+const donationButton = getId('donation-button');
+const historyButton = getId('history-button');
 
-// donation & history
-const donationArea = document.getElementById('donation-area');
-const historyArea = document.getElementById('history-area');
-const donationHistory = document.getElementById('donation-history');
-
-// noakhali
-const noakhaliDonation = document.getElementById('noakhali-donation');
-const noakhaliInput = document.getElementById('noakhali-input');
-const noakhaliButton = document.getElementById('noakhali-button');
-
-// feni
-const feniDonation = document.getElementById('feni-donation');
-const feniInput = document.getElementById('feni-input');
-const feniButton = document.getElementById('feni-button');
-
-// quota
-const quotaDonation = document.getElementById('quota-donation');
-const quotaInput = document.getElementById('quota-input');
-const quotaButton = document.getElementById('quota-button');
-
+// donation & history area
+const donationArea = getId('donation-area');
+const historyArea = getId('history-area');
+const donationHistory = getId('donation-history');
 
 
 
 // button: blog
-blogButton.addEventListener('click', function(){
+getId('blog-button').addEventListener('click', function(){
     window.location.href = './pages/blog.html';
 })
 
@@ -53,26 +36,27 @@ historyButton.addEventListener('click', function(){
 
 
 // noakhali donation
-noakhaliButton.addEventListener('click', function(){
-    const noakhaliValue = parseFloat(noakhaliInput.value);
+getId('noakhali-button').addEventListener('click', function(){
+    const noakhaliInput = getValue('noakhali-input');
     // validation
-    if(isNaN(noakhaliValue) || noakhaliValue < 1) {
+    if(isNaN(noakhaliInput) || noakhaliInput < 1) {
         return alert('Invalid Input');
     }
-    else if(parseFloat(mainBalance.innerText) < noakhaliValue){
+    else if(parseFloat(mainBalance.innerText) < noakhaliInput){
         return alert('Insufficient balance. Please add funds to continue.')
     }
     
     // count donation
-    noakhaliDonation.innerText = parseFloat(noakhaliDonation.innerText) + noakhaliValue;
-    mainBalance.innerText = parseFloat(mainBalance.innerText) - noakhaliValue;
+    getId('noakhali-donation').innerText = getNumber('noakhali-donation') + noakhaliInput;
+    mainBalance.innerText = parseFloat(mainBalance.innerText) - noakhaliInput;
 
     // donation history
     donationHistory.innerHTML += 
     `<li class="space-y-3 border rounded-xl p-8 my-8 mx-4">
-        <p class="text-xl font-semibold">${noakhaliValue} Taka is Donated for famine-2024 at Noakhali, Bangladesh</p>
+        <p class="text-xl font-semibold">${noakhaliInput} Taka is Donated for famine-2024 at Noakhali, Bangladesh</p>
         <p class="text-secondary">Date : ${new Date()}</p>
     </li>`;
+    getId('noakhali-input').value = '';
 
     // modal
     my_modal_5.showModal();
@@ -81,26 +65,27 @@ noakhaliButton.addEventListener('click', function(){
 
 
 // feni donation
-feniButton.addEventListener('click', function(){
-    const feniValue = parseFloat(feniInput.value);
+getId('feni-button').addEventListener('click', function(){
+    const feniInput = getValue('feni-input');
     // validation
-    if(isNaN(feniValue) || feniValue < 1) {
+    if(isNaN(feniInput) || feniInput < 1) {
         return alert('Invalid Input');
     }
-    else if(parseFloat(mainBalance.innerText) < feniValue){
+    else if(parseFloat(mainBalance.innerText) < feniInput){
         return alert('Insufficient balance. Please add funds to continue.')
     }
     
     // count donation
-    feniDonation.innerText = parseFloat(feniDonation.innerText) + feniValue;
-    mainBalance.innerText = parseFloat(mainBalance.innerText) - feniValue;
+    getId('feni-donation').innerText = getNumber('feni-donation') + feniInput;
+    mainBalance.innerText = parseFloat(mainBalance.innerText) - feniInput;
 
     // donation history
     donationHistory.innerHTML += 
     `<li class="space-y-3 border rounded-xl p-8 my-8 mx-4">
-        <p class="text-xl font-semibold">${feniValue} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+        <p class="text-xl font-semibold">${feniInput} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
         <p class="text-secondary">Date : ${new Date()}</p>
     </li>`;
+    getId('feni-input').value = '';
 
     // modal
     my_modal_5.showModal();
@@ -109,26 +94,27 @@ feniButton.addEventListener('click', function(){
 
 
 // quota donation
-quotaButton.addEventListener('click', function(){
-    const quotaValue = parseFloat(quotaInput.value);
+getId('quota-button').addEventListener('click', function(){
+    const quotaInput = getValue('quota-input');
     // validation
-    if(isNaN(quotaValue) || quotaValue < 1) {
+    if(isNaN(quotaInput) || quotaInput < 1) {
         return alert('Invalid Input');
     }
-    else if(parseFloat(mainBalance.innerText) < quotaValue){
+    else if(parseFloat(mainBalance.innerText) < quotaInput){
         return alert('Insufficient balance. Please add funds to continue.')
     }
     
     // count donation
-    quotaDonation.innerText = parseFloat(quotaDonation.innerText) + quotaValue;
-    mainBalance.innerText = parseFloat(mainBalance.innerText) - quotaValue;
+    getId('quota-donation').innerText = getNumber('quota-donation') + quotaInput;
+    mainBalance.innerText = parseFloat(mainBalance.innerText) - quotaInput;
 
     // donation history
     donationHistory.innerHTML += 
     `<li class="space-y-3 border rounded-xl p-8 my-8 mx-4">
-        <p class="text-xl font-semibold">${quotaValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+        <p class="text-xl font-semibold">${quotaInput} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
         <p class="text-secondary">Date : ${new Date()}</p>
     </li>`;
+    getId('quota-input').value = '';
 
     // modal
     my_modal_5.showModal();
